@@ -1,43 +1,58 @@
-📊 COVID-19 Data Analysis with SQL Server
+📊 COVID-19 Data Exploration in SQL Server
+📌 About This Project
 
-A comprehensive SQL-based analysis of global COVID-19 data focused on infection trends, mortality rates, and vaccination progress across countries and continents.
+In this project, I explored a real COVID-19 dataset using SQL Server to analyze cases, deaths, and vaccination trends across different countries and continents.
 
-🚀 Project Overview
+The goal was to practice data cleaning, aggregation, and advanced SQL techniques while answering real analytical questions like:
 
-This project explores real-world COVID-19 datasets using advanced SQL techniques to uncover meaningful insights about:
+Which countries had the highest infection rate?
+What is the death percentage compared to total cases?
+How did vaccination progress over time?
+Which continent was most affected?
 
-🌍 Global and country-level case trends
-☠️ Death rates and mortality percentages
-📈 Infection rates relative to population
-💉 Vaccination progress and population coverage
+This project helped me strengthen my SQL skills and improve how I structure analytical queries.
 
-The analysis transforms raw data into structured, decision-ready insights using clean, optimized, and reusable SQL queries.
+🛠 What I Did
+1️⃣ Data Cleaning
+Filtered out aggregated regions using continent IS NOT NULL
+Fixed divide-by-zero errors using NULLIF()
+Ensured accurate percentage calculations
+2️⃣ Exploratory Data Analysis
 
-🛠️ Skills & Techniques Demonstrated
-Data Cleaning & Filtering (WHERE continent IS NOT NULL)
-Error Handling (NULLIF() to prevent divide-by-zero)
-Aggregate Functions (SUM, MAX)
-Window Functions (SUM() OVER (PARTITION BY ORDER BY))
-Common Table Expressions (CTEs)
+I calculated:
+
+Total global cases and total deaths
+Death percentage per country (e.g., Egypt)
+Cases compared to population
+Countries with highest infection rate
+Countries with highest death rate
+Continents with highest total deaths
+3️⃣ Vaccination Analysis
+Joined CovidDeaths and CovidVaccinations tables
+Used Window Functions (SUM OVER PARTITION BY) to calculate rolling vaccination totals
+Calculated percentage of population vaccinated
+Built:
+A CTE for cleaner query structure
+A Temporary Table for step-by-step analysis
+A View for reusable reporting
+💡 SQL Concepts Used
+JOIN
+GROUP BY
+SUM() and MAX()
+Window Functions (OVER (PARTITION BY ORDER BY))
+CTEs
 Temporary Tables
-View Creation for reusable reporting
-Data Joining across multiple tables
-📌 Key Insights Generated
-Total global cases and deaths
-Death percentage per country
-Infection rate compared to population
-Countries with the highest infection and death rates
-Continents with the highest mortality
-Rolling vaccination totals per country
-Percentage of population vaccinated
-🎯 Objective
-
-To demonstrate strong SQL proficiency in:
-
-Data exploration
-Analytical thinking
-Query optimization
-Building reusable reporting structures
-Turning raw data into actionable insights
-📂 Technologies Used
+Views
+Error handling with NULLIF()
+🎯 What I Learned
+How to handle real-world messy data
+How to prevent calculation errors in SQL
+How to use window functions for running totals
+How to structure queries in a clean and readable way
+How to think analytically about data instead of just writing queries
+🖥 Tools Used
 Microsoft SQL Server
+
+📈 Why I Built This
+
+As someone learning data analysis, I wanted to work on a real dataset and apply SQL beyond simple SELECT statements. This project represents my progress in writing more advanced queries and building reusable analytical solutions.
